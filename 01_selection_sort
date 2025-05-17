@@ -1,0 +1,23 @@
+def selectionSort(A):
+    n = len(A)
+    for j in range (n-1):
+        minIndex = j
+        for i in range(j+1,n):
+            if A[i] < A[minIndex]:
+                minIndex = i
+        A[j], A[minIndex] =  A[minIndex], A[j] 
+        
+
+def main():
+    A= []
+    
+    for i in range (5):
+        inpt = int(input("Enter marks: "))
+        A.append(inpt)
+
+    markArr = selectionSort(A)
+
+    print(f"Your marks in sorted way is: {A}")
+
+if __name__ == "__main__":
+    main()
